@@ -4,7 +4,12 @@ function handleYesClick() {
 
 function moveButton() {
     let button = document.querySelector(".no-button");
-    let x = Math.random() * window.innerWidth - 100;
-    let y = Math.random() * window.innerHeight - 50;
-    button.style.transform = `translate(${x}px, ${y}px)`;
+    let maxX = window.innerWidth - 150;
+    let maxY = window.innerHeight - 100;
+
+    let x = Math.random() * maxX;
+    let y = Math.random() * maxY;
+
+    button.style.left = `${x}px`;
+    button.style.top = `${y}px`;
 }
